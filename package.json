@@ -12,6 +12,11 @@
   },
   "dependencies": {
     "@okta/jwt-verifier": "^1.0.0",
+    "@turf/boolean-point-in-polygon": "^6.0.1",
+    "@turf/circle": "^6.0.1",
+    "@turf/distance": "^6.0.1",
+    "@turf/helpers": "^6.1.4",
+    "@turf/transform-rotate": "^5.1.5",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.11.1",
     "apollo-datasource-rest": "^0.9.3",
