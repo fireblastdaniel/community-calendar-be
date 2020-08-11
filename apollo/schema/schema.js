@@ -1,10 +1,12 @@
-// const {importSchema} = require('graphql-import');
-const {loadSchemaFiles} = require('graphql-toolkit');
+const {importSchema} = require('graphql-import');
+// const {loadSchemaFiles} = require('graphql-toolkit');
 const gql = require('graphql-tag');
 const {disableFragmentWarnings} = require('graphql-tag');
-const basicDefs = loadSchemaFiles('./apollo.graphql');
-// const basicDefs = importSchema('./apollo.graphql');
+// const basicDefs = loadSchemaFiles('./apollo.graphql');
+const basicDefs = importSchema('./apollo.graphql');
 // const basicDefs = gql(importSchema('./apollo.graphql'));
+
+console.log(basicDefs);
 
 disableFragmentWarnings();
 
