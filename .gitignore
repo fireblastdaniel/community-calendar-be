@@ -98,4 +98,4 @@ dist/
 **/out
 **/build
 **/dist
-**/generated
+# **/generated
