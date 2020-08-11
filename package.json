@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "author": "Lambda Labs",
   "license": "MIT",
+  "scripts": {
+    "start": "node apollo/src/index.js"
+  },
   "engines": {
     "node": ">=12"
   },
