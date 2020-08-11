@@ -1,4 +1,5 @@
 // const {importSchema} = require('graphql-import');
+console.log('okay :)');
 const {loadSchemaFiles, loadTypedefs} = require('graphql-toolkit');
 const {loadTypedefsSync} = require('@graphql-tools/load');
 const {GraphQLFileLoader} = require('@graphql-tools/graphql-file-loader');
