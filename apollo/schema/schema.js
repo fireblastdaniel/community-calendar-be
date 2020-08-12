@@ -22,7 +22,12 @@ async function defsImport() {
   basicDefs = await importSchema('./apollo.graphql');
 }
 
-defsImport();
+try {
+  defsImport();
+} catch (error) {
+  console.log(error);
+}
+
 console.log(basicDefs);
 
 // console.log(basicDefs);
