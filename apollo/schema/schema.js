@@ -5,7 +5,7 @@ console.log('okay :)');
 // const {GraphQLFileLoader} = require('@graphql-tools/graphql-file-loader');
 // const {addResolversToSchema} = require('@graphql-tools/schema');
 const {mergeTypedefs} = require('@graphql-tools/merge');
-const basicDefs = require('gqlSchema');
+const basicDefs = require('./gqlSchema');
 const gql = require('graphql-tag');
 // const path = require('path');
 const {disableFragmentWarnings} = require('graphql-tag');
