@@ -6,6 +6,181 @@ module.exports = `
     connect: [UserWhereUniqueInput!]
   }
 
+  input UserCreateWithoutRsvpsInput {
+    id: ID
+    firstName: String
+    lastName: String
+    oktaId: String!
+    organizations: OrganizationCreateManyWithoutUsersInput
+    saved: EventCreateManyWithoutSavedInput
+    adminFor: EventCreateManyWithoutAdminsInput
+    createdEvents: EventCreateManyWithoutCreatorInput
+    createdImages: EventImageCreateManyWithoutCreatorInput
+    profileImage: String
+  }
+
+  input UserWhereUniqueInput {
+    id: ID
+    oktaId: String
+  }
+
+  input UserCreateManyWithoutSavedInput {
+    create: [UserCreateWithoutSavedInput!]
+    connect: [UserWhereUniqueInput!]
+  }
+
+  input EventUrlCreateManyWithoutEventInput {
+    create: [EventUrlCreateWithoutEventInput!]
+    connect: [EventUrlWhereUniqueInput!]
+  }
+
+  input UserCreateManyWithoutAdminForInput {
+    create: [UserCreateWithoutAdminForInput!]
+    connect: [UserWhereUniqueInput!]
+  }
+
+  input LocationCreateManyWithoutEventInput {
+    create: [LocationCreateWithoutEventInput!]
+    connect: [LocationWhereUniqueInput!]
+  }
+
+  input SeriesCreateOneWithoutEventsInput {
+    create: SeriesCreateWithoutEventsInput
+    connect: SeriesWhereUniqueInput
+  }
+
+  input UserUpdateManyWithoutRsvpsInput {
+    create: [UserCreateWithoutRsvpsInput!]
+    delete: [UserWhereUniqueInput!]
+    connect: [UserWhereUniqueInput!]
+    set: [UserWhereUniqueInput!]
+    disconnect: [UserWhereUniqueInput!]
+    update: [UserUpdateWithWhereUniqueWithoutRsvpsInput!]
+    upsert: [UserUpsertWithWhereUniqueWithoutRsvpsInput!]
+    deleteMany: [UserScalarWhereInput!]
+    updateMany: [UserUpdateManyWithWhereNestedInput!]
+  }
+
+  input UserUpdateManyWithoutSavedInput {
+    create: [UserCreateWithoutSavedInput!]
+    delete: [UserWhereUniqueInput!]
+    connect: [UserWhereUniqueInput!]
+    set: [UserWhereUniqueInput!]
+    disconnect: [UserWhereUniqueInput!]
+    update: [UserUpdateWithWhereUniqueWithoutSavedInput!]
+    upsert: [UserUpsertWithWhereUniqueWithoutSavedInput!]
+    deleteMany: [UserScalarWhereInput!]
+    updateMany: [UserUpdateManyWithWhereNestedInput!]
+  }
+
+  input EventUrlUpdateManyWithoutEventInput {
+    create: [EventUrlCreateWithoutEventInput!]
+    delete: [EventUrlWhereUniqueInput!]
+    connect: [EventUrlWhereUniqueInput!]
+    set: [EventUrlWhereUniqueInput!]
+    disconnect: [EventUrlWhereUniqueInput!]
+    update: [EventUrlUpdateWithWhereUniqueWithoutEventInput!]
+    upsert: [EventUrlUpsertWithWhereUniqueWithoutEventInput!]
+    deleteMany: [EventUrlScalarWhereInput!]
+    updateMany: [EventUrlUpdateManyWithWhereNestedInput!]
+  }
+
+  input UserUpdateManyWithoutAdminForInput {
+    create: [UserCreateWithoutAdminForInput!]
+    delete: [UserWhereUniqueInput!]
+    connect: [UserWhereUniqueInput!]
+    set: [UserWhereUniqueInput!]
+    disconnect: [UserWhereUniqueInput!]
+    update: [UserUpdateWithWhereUniqueWithoutAdminForInput!]
+    upsert: [UserUpsertWithWhereUniqueWithoutAdminForInput!]
+    deleteMany: [UserScalarWhereInput!]
+    updateMany: [UserUpdateManyWithWhereNestedInput!]
+  }
+
+  input LocationUpdateManyWithoutEventInput {
+    create: [LocationCreateWithoutEventInput!]
+    delete: [LocationWhereUniqueInput!]
+    connect: [LocationWhereUniqueInput!]
+    set: [LocationWhereUniqueInput!]
+    disconnect: [LocationWhereUniqueInput!]
+    update: [LocationUpdateWithWhereUniqueWithoutEventInput!]
+    upsert: [LocationUpsertWithWhereUniqueWithoutEventInput!]
+    deleteMany: [LocationScalarWhereInput!]
+    updateMany: [LocationUpdateManyWithWhereNestedInput!]
+  }
+
+  input OrganizationUpdateManyWithoutUsersInput {
+    create: [OrganizationCreateWithoutUsersInput!]
+    delete: [OrganizationWhereUniqueInput!]
+    connect: [OrganizationWhereUniqueInput!]
+    set: [OrganizationWhereUniqueInput!]
+    disconnect: [OrganizationWhereUniqueInput!]
+    update: [OrganizationUpdateWithWhereUniqueWithoutUsersInput!]
+    upsert: [OrganizationUpsertWithWhereUniqueWithoutUsersInput!]
+    deleteMany: [OrganizationScalarWhereInput!]
+    updateMany: [OrganizationUpdateManyWithWhereNestedInput!]
+  }
+
+  input EventUpdateManyWithoutRsvpsInput {
+    create: [EventCreateWithoutRsvpsInput!]
+    delete: [EventWhereUniqueInput!]
+    connect: [EventWhereUniqueInput!]
+    set: [EventWhereUniqueInput!]
+    disconnect: [EventWhereUniqueInput!]
+    update: [EventUpdateWithWhereUniqueWithoutRsvpsInput!]
+    upsert: [EventUpsertWithWhereUniqueWithoutRsvpsInput!]
+    deleteMany: [EventScalarWhereInput!]
+    updateMany: [EventUpdateManyWithWhereNestedInput!]
+  }
+
+  input EventUpdateManyWithoutSavedInput {
+    create: [EventCreateWithoutSavedInput!]
+    delete: [EventWhereUniqueInput!]
+    connect: [EventWhereUniqueInput!]
+    set: [EventWhereUniqueInput!]
+    disconnect: [EventWhereUniqueInput!]
+    update: [EventUpdateWithWhereUniqueWithoutSavedInput!]
+    upsert: [EventUpsertWithWhereUniqueWithoutSavedInput!]
+    deleteMany: [EventScalarWhereInput!]
+    updateMany: [EventUpdateManyWithWhereNestedInput!]
+  }
+
+  input EventUpdateManyWithoutAdminsInput {
+    create: [EventCreateWithoutAdminsInput!]
+    delete: [EventWhereUniqueInput!]
+    connect: [EventWhereUniqueInput!]
+    set: [EventWhereUniqueInput!]
+    disconnect: [EventWhereUniqueInput!]
+    update: [EventUpdateWithWhereUniqueWithoutAdminsInput!]
+    upsert: [EventUpsertWithWhereUniqueWithoutAdminsInput!]
+    deleteMany: [EventScalarWhereInput!]
+    updateMany: [EventUpdateManyWithWhereNestedInput!]
+  }
+
+  input EventUpdateManyWithoutCreatorInput {
+    create: [EventCreateWithoutCreatorInput!]
+    delete: [EventWhereUniqueInput!]
+    connect: [EventWhereUniqueInput!]
+    set: [EventWhereUniqueInput!]
+    disconnect: [EventWhereUniqueInput!]
+    update: [EventUpdateWithWhereUniqueWithoutCreatorInput!]
+    upsert: [EventUpsertWithWhereUniqueWithoutCreatorInput!]
+    deleteMany: [EventScalarWhereInput!]
+    updateMany: [EventUpdateManyWithWhereNestedInput!]
+  }
+
+  input EventImageUpdateManyWithoutCreatorInput {
+    create: [EventImageCreateWithoutCreatorInput!]
+    delete: [EventImageWhereUniqueInput!]
+    connect: [EventImageWhereUniqueInput!]
+    set: [EventImageWhereUniqueInput!]
+    disconnect: [EventImageWhereUniqueInput!]
+    update: [EventImageUpdateWithWhereUniqueWithoutCreatorInput!]
+    upsert: [EventImageUpsertWithWhereUniqueWithoutCreatorInput!]
+    deleteMany: [EventImageScalarWhereInput!]
+    updateMany: [EventImageUpdateManyWithWhereNestedInput!]
+  }
+
   input UserCheckIdInput {
     oktaId: String!
   }
