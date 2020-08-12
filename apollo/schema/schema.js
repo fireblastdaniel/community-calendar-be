@@ -4,7 +4,7 @@ console.log('okay :)');
 // const {loadTypedefsSync} = require('@graphql-tools/load');
 // const {GraphQLFileLoader} = require('@graphql-tools/graphql-file-loader');
 // const {addResolversToSchema} = require('@graphql-tools/schema');
-const {mergeTypedefs} = require('@graphql-tools/merge');
+const {mergeTypeDefs} = require('@graphql-tools/merge');
 const basicDefs = require('./gqlSchema');
 const gql = require('graphql-tag');
 // const path = require('path');
@@ -320,4 +320,4 @@ const mutationDefs = gql`
 // combine imported schema and extended schema
 const typeDefs = [basicDefs, mutationDefs];
 
-module.exports = mergeTypedefs(typeDefs, {all: true});
+module.exports = mergeTypeDefs(typeDefs, {all: true});
