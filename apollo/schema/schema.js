@@ -4,10 +4,14 @@ console.log('okay :)');
 // const {loadTypedefsSync} = require('@graphql-tools/load');
 // const {GraphQLFileLoader} = require('@graphql-tools/graphql-file-loader');
 // const {addResolversToSchema} = require('@graphql-tools/schema');
+const {mergeTypedefs} = require('@graphql-tools/merge');
+const basicDefs = require('apollo.graphql');
 const gql = require('graphql-tag');
 // const path = require('path');
 const {disableFragmentWarnings} = require('graphql-tag');
 const {importSchema} = require('graphql-import');
+const {type} = require('os');
+
 // const basicDefs = loadTypedefs('./apollo.graphql');
 // const basicDefs = importSchema('./apollo.graphql');
 // const basicDefs = gql(importSchema('./apollo.graphql'));
@@ -17,18 +21,20 @@ const {importSchema} = require('graphql-import');
 // });
 // const documentNodes = sources.map(source => source.document);
 // console.log(documentNodes);
-let basicDefs = 1;
-async function defsImport() {
-  try {
-    basicDefs = await importSchema('./apollo.graphql');
-  } catch (e) {
-    console.log(e);
-  }
-}
+// let basicDefs = 1;
+// async function defsImport() {
+//   try {
+//     basicDefs = await importSchema('./apollo.graphql');
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
 
-defsImport();
+// defsImport().then(() => {
 
-console.log(basicDefs);
+// });
+
+// console.log(basicDefs);
 
 // console.log(basicDefs);
 
@@ -314,4 +320,4 @@ const mutationDefs = gql`
 // combine imported schema and extended schema
 const typeDefs = [basicDefs, mutationDefs];
 
-module.exports = typeDefs;
+module.exports = mergeTypedefs(typeDefs, {all: true});
