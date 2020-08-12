@@ -1,4 +1,6 @@
 module.exports = `
+  scalar DateTime
+
   input UserCheckIdInput {
     oktaId: String!
   }

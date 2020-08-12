@@ -13,7 +13,10 @@ const Event = require('./Event')
 const Tag = require('./Tag')
 const Series = require('./Series')
 
+const { GraphQLDateTime } = require('graphql-iso-date')
+
 const resolvers = {
+  DateTime: GraphQLDateTime
   Query,
   Mutation,
   User,
