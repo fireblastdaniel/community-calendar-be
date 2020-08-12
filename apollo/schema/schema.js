@@ -1,21 +1,29 @@
 // const {importSchema} = require('graphql-import');
 console.log('okay :)');
-const {loadSchemaFiles, loadTypedefs} = require('graphql-toolkit');
-const {loadTypedefsSync} = require('@graphql-tools/load');
-const {GraphQLFileLoader} = require('@graphql-tools/graphql-file-loader');
-const {addResolversToSchema} = require('@graphql-tools/schema');
+// const {loadSchemaFiles, loadTypedefs} = require('graphql-toolkit');
+// const {loadTypedefsSync} = require('@graphql-tools/load');
+// const {GraphQLFileLoader} = require('@graphql-tools/graphql-file-loader');
+// const {addResolversToSchema} = require('@graphql-tools/schema');
 const gql = require('graphql-tag');
-const path = require('path');
+// const path = require('path');
 const {disableFragmentWarnings} = require('graphql-tag');
+const {importSchema} = require('graphql-import');
 // const basicDefs = loadTypedefs('./apollo.graphql');
 // const basicDefs = importSchema('./apollo.graphql');
 // const basicDefs = gql(importSchema('./apollo.graphql'));
 
-const sources = loadTypedefsSync(path.join(__dirname, 'apollo.graphql'), {
-  loaders: [new GraphQLFileLoader()],
-});
-const documentNodes = sources.map(source => source.document);
-console.log(documentNodes);
+// const sources = loadTypedefsSync(path.join(__dirname, 'apollo.graphql'), {
+//   loaders: [new GraphQLFileLoader()],
+// });
+// const documentNodes = sources.map(source => source.document);
+// console.log(documentNodes);
+let basicDefs;
+async function defsImport() {
+  basicDefs = await importSchema('./apollo.graphql');
+}
+
+defsImport();
+console.log(basicDefs);
 
 // console.log(basicDefs);
 
