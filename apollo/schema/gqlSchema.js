@@ -1,6 +1,11 @@
 module.exports = `
   scalar DateTime
 
+  input UserCreateManyWithoutRsvpsInput {
+    create: [UserCreateWithoutRsvpsInput!]
+    connect: [UserWhereUniqueInput!]
+  }
+
   input UserCheckIdInput {
     oktaId: String!
   }
