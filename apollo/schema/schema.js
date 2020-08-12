@@ -17,7 +17,7 @@ const {importSchema} = require('graphql-import');
 // });
 // const documentNodes = sources.map(source => source.document);
 // console.log(documentNodes);
-let basicDefs;
+let basicDefs = 1;
 async function defsImport() {
   basicDefs = await importSchema('./apollo.graphql');
 }
