@@ -1,21 +1,21 @@
-# import Query.users from "generated/prisma.graphql"
-# import Query.tags from 'generated/prisma.graphql'
-# import Query.events from 'generated/prisma.graphql'
-# import Query.series from 'generated/prisma.graphql'
-# import Query.serieses from 'generated/prisma.graphql'
+import Query.users from "generated/prisma.graphql"
+import Query.tags from 'generated/prisma.graphql'
+import Query.events from 'generated/prisma.graphql'
+import Query.series from 'generated/prisma.graphql'
+import Query.serieses from 'generated/prisma.graphql'
 
-# import Mutation.deleteEvent from 'generated/prisma.graphql'
-# import Mutation.rsvpEvent from 'generated/prisma.graphql'
-# import Mutation.saveEvent from 'generated/prisma.graphql'
-# import Mutation.createSeries from 'generated/prisma.graphql'
-# import Mutation.updateSeries from 'generated/prisma.graphql'
-# import Mutation.deleteSeries from 'generated/prisma.graphql'
+import Mutation.deleteEvent from 'generated/prisma.graphql'
+import Mutation.rsvpEvent from 'generated/prisma.graphql'
+import Mutation.saveEvent from 'generated/prisma.graphql'
+import Mutation.createSeries from 'generated/prisma.graphql'
+import Mutation.updateSeries from 'generated/prisma.graphql'
+import Mutation.deleteSeries from 'generated/prisma.graphql'
 
-# import User, Location, Event, Tags from 'generated/prisma.graphql'
+import User, Location, Event, Tags from 'generated/prisma.graphql'
 
-# import TMEvent from '../src/ticket-master/tm.schema.graphql'
-# import TMResults from '../src/ticket-master/tm.schema.graphql'
-# import TMResultsAlt from '../src/ticket-master/tm.schema.graphql'
+import TMEvent from '../src/ticket-master/tm.schema.graphql'
+import TMResults from '../src/ticket-master/tm.schema.graphql'
+import TMResultsAlt from '../src/ticket-master/tm.schema.graphql'
 
 input UserCheckIdInput {
   oktaId: String!

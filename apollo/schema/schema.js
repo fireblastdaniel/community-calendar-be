@@ -5,7 +5,7 @@ console.log('okay :)');
 // const {GraphQLFileLoader} = require('@graphql-tools/graphql-file-loader');
 // const {addResolversToSchema} = require('@graphql-tools/schema');
 const {mergeTypeDefs} = require('@graphql-tools/merge');
-const basicDefs = require('./gqlSchema');
+// const basicDefs = require('./gqlSchema');
 const gql = require('graphql-tag');
 // const path = require('path');
 const {disableFragmentWarnings} = require('graphql-tag');
@@ -13,8 +13,9 @@ const {importSchema} = require('graphql-import');
 const {type} = require('os');
 
 // const basicDefs = loadTypedefs('./apollo.graphql');
-// const basicDefs = importSchema('./apollo.graphql');
+const basicDefs = importSchema('./apollo.graphql');
 // const basicDefs = gql(importSchema('./apollo.graphql'));
+console.log(basicDefs);
 
 // const sources = loadTypedefsSync(path.join(__dirname, 'apollo.graphql'), {
 //   loaders: [new GraphQLFileLoader()],
