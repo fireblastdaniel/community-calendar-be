@@ -3419,7 +3419,7 @@ module.exports = `
     description: String!
     start: DateTime!
     end: DateTime!
-    eventImages: [EventCreateImageInput!]
+    eventImages: [EventImageCreateManyWithoutEventInput!]
     rsvps: UserCreateManyWithoutRsvpsInput
     saved: UserCreateManyWithoutSavedInput
     urls: EventUrlCreateManyWithoutEventInput
@@ -3435,7 +3435,7 @@ module.exports = `
     description: String
     start: DateTime
     end: DateTime
-    eventImages: [EventCreateImageInput!]
+    eventImages: [EventImageCreateManyWithoutEventInput!]
     rsvps: UserUpdateManyWithoutRsvpsInput
     saved: UserUpdateManyWithoutSavedInput
     urls: EventUrlUpdateManyWithoutEventInput
