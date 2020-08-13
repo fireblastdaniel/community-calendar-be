@@ -3411,21 +3411,6 @@ module.exports = `
     series: SeriesCreateOneWithoutEventsInput
   }
 
-  input EventUpdateInput {
-    title: String
-    description: String
-    start: DateTime
-    end: DateTime
-    eventImages: [EventCreateImageInput!]
-    rsvps: UserUpdateManyWithoutRsvpsInput
-    saved: UserUpdateManyWithoutSavedInput
-    urls: EventUrlUpdateManyWithoutEventInput
-    admins: UserUpdateManyWithoutAdminForInput
-    locations: LocationUpdateManyWithoutEventInput
-    tags: [EventCreateTagInput!]
-    ticketPrice: Float
-  }
-
   input UserUpdateInput {
     firstName: String
     lastName: String
