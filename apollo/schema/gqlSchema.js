@@ -3577,40 +3577,6 @@ module.exports = `
       first: Int
       last: Int
     ): [Tag!]
-    ticketMasterEvents(
-      radius: Int
-      # "miles" or "km"
-      unit: String
-      #number of events per page
-      size: Int
-      page: String
-      keyword: String
-      #Point to search for events from "30.00,-67.00" . NO SPACES
-      latlong: String
-      startDateTime: DateTime
-      endDateTime: DateTime
-      city: String
-      countryCode: String
-      stateCode: String
-      postalCode: String
-    ): TMResults
-    ticketMasterEventsAlt(
-      radius: Int
-      # "miles" or "km"
-      unit: String
-      #number of events per page
-      size: Int
-      page: String
-      keyword: String
-      #Point to search for events from "30.00,-67.00" . NO SPACES
-      latlong: String
-      startDateTime: DateTime
-      endDateTime: DateTime
-      city: String
-      countryCode: String
-      stateCode: String
-      postalCode: String
-    ): TMResultsAlt
   }
 
   type Mutation {
