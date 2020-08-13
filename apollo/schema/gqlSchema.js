@@ -72,25 +72,6 @@ module.exports = `
     aggregate: AggregateEvent!
   }
   
-  input EventCreateInput {
-    id: ID
-    title: String!
-    description: String!
-    start: DateTime!
-    end: DateTime!
-    ticketPrice: Float!
-    creator: UserCreateOneWithoutCreatedEventsInput
-    eventImages: EventImageCreateManyWithoutEventInput
-    rsvps: UserCreateManyWithoutRsvpsInput
-    saved: UserCreateManyWithoutSavedInput
-    urls: EventUrlCreateManyWithoutEventInput
-    admins: UserCreateManyWithoutAdminForInput
-    locations: LocationCreateManyWithoutEventInput
-    tags: TagCreateManyWithoutEventsInput
-    index: String!
-    series: SeriesCreateOneWithoutEventsInput
-  }
-  
   input EventCreateManyWithoutAdminsInput {
     create: [EventCreateWithoutAdminsInput!]
     connect: [EventWhereUniqueInput!]
